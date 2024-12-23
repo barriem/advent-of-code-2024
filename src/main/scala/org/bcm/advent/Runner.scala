@@ -6,14 +6,15 @@ import com.monovore.decline.*
 import com.monovore.decline.effect.*
 import eu.timepit.refined.*
 import eu.timepit.refined.api.Refined
-import solutions.Day1
+import solutions.*
 
 object Runner extends CommandIOApp(name = "Advent24", header = "Advent of Code 2024 solutions") {
   import RunnerArgs.*
 
   private val solutions =
     Seq[PuzzleSolution](
-      Day1
+      Day1,
+      Day2
     )
 
   private def readInput(day: Day, part: Part): IO[List[String]] =
